@@ -19,7 +19,7 @@ namespace Tyuiu.GaleevTS.Sprint2.Task0.V30
 
 
 
-            Console.Title = "Спринт №1 | Выполнил: Галеев Т. С. | ИИПб-23-3";
+            Console.Title = "Спринт №2 | Выполнил: Галеев Т. С. | ИИПб-23-3";
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* Спринт #2                                                                *");
             Console.WriteLine("* Тема: Операции сравнения                                                 *");
