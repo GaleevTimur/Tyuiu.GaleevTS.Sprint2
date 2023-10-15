@@ -3,31 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tyuiu.GaleevTS.Sprint2.Task2.V4.Lib;
 
-using Tyuiu.GaleevTS.Sprint2.Task1.V13.Lib;
-
-namespace Tyuiu.GaleevTS.Sprint2.Task1.V13
+namespace Tyuiu.GaleevTS.Sprint2.Task2.V4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DataService ds = new DataService();
-            int a = 145;
-            int b = 916;
-            int c = 164;
-            int d = 137;
-            bool[] res = new bool[6];
-            res = ds.GetLogicOperations(a, b, c, d);
-
-
-
             Console.Title = "Спринт №2 | Выполнил: Галеев Т. С. | ИИПб-23-3";
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* Спринт #2                                                                *");
             Console.WriteLine("* Тема: Операции сравнения                                                 *");
-            Console.WriteLine("* Задание №1                                                               *");
-            Console.WriteLine("* Вариант #13                                                             *");
+            Console.WriteLine("* Задание №2                                                               *");
+            Console.WriteLine("* Вариант #4                                                              *");
             Console.WriteLine("* Выполнил: Галеев Тимур Серикович | ИИПб-23-3                             *");
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                 *");
@@ -38,20 +27,24 @@ namespace Tyuiu.GaleevTS.Sprint2.Task1.V13
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ                                                          *");
             Console.WriteLine("****************************************************************************");
-            Console.WriteLine("Значение a = " + a);
-            Console.WriteLine("Значение b = " + b);
-            Console.WriteLine("Значение c = " + c);
-            Console.WriteLine("Значение d = " + d);
+            Console.WriteLine("Введите значение переменной Х: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение переменной Y: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            DataService ds = new DataService();
+            bool res = ds.CheckDotInShadedArea(x, y);
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                               *");
             Console.WriteLine("****************************************************************************");
-            for (int i = 0; i < 6; i++)
+            if (res)
             {
-                Console.WriteLine(res[i]);
-
+                Console.WriteLine("Точка находиться в заштрихованной области");
             }
-
-            Console.ReadKey();
+            else
+            {
+                Console.WriteLine("Точка не находиться в заштрихованной области");
+            }
+            Console.ReadKey();   
         }
     }
 }
